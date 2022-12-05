@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+ <listeners>
+ 	<listener class-name="cialfoGroups.testUtils.AnnotationTransformer"/>
+  	<listener class-name="cialfoGroups.testUtils.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="LOGIN">
+    <classes>
+      <class name="cialfoGroups.LoginTests.test001"/>
+      <parameter name="email" value="email@21.com"/>
+      <parameter name="password" value="12345678"/>
+      <parameter name="wrongPassword" value="1212"/>
+      <parameter name="wrongEmail" value="hell@hello.com"/>
+    </classes>
+  </test>
+</suite> <!-- Suite -->
+ 

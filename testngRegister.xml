@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+ <listeners>
+ 	<listener class-name="cialfoGroups.testUtils.AnnotationTransformer"/>
+  	<listener class-name="cialfoGroups.testUtils.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="REGISTER-WITH-ONBOARDING">
+    <classes>
+      <class name="cialfoGroups.RegisterTests.testWithOnboarding"/>
+      <parameter name="instituteName" value="test"/>
+      <parameter name="graduationYear" value="2010"/>
+    </classes>
+  </test>
+  <!--<test name="REGISTER-WITHOUT-ONBOARDING">
+  	<classes>
+      <class name="cialfoGroups.RegisterTests.testWithoutOnboarding"/>
+      <parameter name="instituteName" value="test"/>
+    </classes>
+  </test>-->
+</suite> <!-- Suite -->
